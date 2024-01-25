@@ -23,7 +23,7 @@ def register():
 
         if error is None:
             try:
-                db.execut( # execute takes a SQL query with ? placeholders for any user input, and a tuple of values to replace the placeholders with.
+                db.execute( # execute takes a SQL query with ? placeholders for any user input, and a tuple of values to replace the placeholders with.
                     'INSERT INTO user (username, password) VALUES (?, ?)',
                     (username, generate_password_hash(password))
                 )
